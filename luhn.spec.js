@@ -12,32 +12,32 @@ describe('Luhn',function() {
     expect(luhn.checkDigit).toEqual(0);
   });
 
-  xit('addends',function() {
+  it('addends',function() {
     var luhn = new Luhn(12121);
     expect(luhn.addends).toEqual([1, 4, 1, 4, 1]);
   });
 
-  xit('too large added',function() {
+  it('too large added',function() {
     var luhn = new Luhn(8631);
     expect(luhn.addends).toEqual([7, 6, 6, 1]);
   });
 
-  xit('checksum',function() {
+  it('checksum',function() {
     var luhn = new Luhn(4913);
     expect(luhn.checksum).toEqual(22);
   });
 
-  xit('checksum again',function() {
+  it('checksum again',function() {
     var luhn = new Luhn(201773);
     expect(luhn.checksum).toEqual(21);
   });
 
-  xit('invalid number',function() {
+  it('invalid number',function() {
     var luhn = new Luhn(738);
     expect(luhn.valid).toEqual(false);
   });
 
-  xit('invalid number',function() {
+  it('valid number',function() {
     var luhn = new Luhn(8739567);
     expect(luhn.valid).toEqual(true);
   });
